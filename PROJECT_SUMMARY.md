@@ -134,6 +134,30 @@ curl -X POST http://127.0.0.1:8000/stk-push/ \
   -d '{"phone": "254712345678", "amount": 1}'
 ```
 
+### Callback Testing
+```bash
+curl -X POST http://127.0.0.1:8000/mpesa/callback \
+  -H "Content-Type: application/json" \
+  -d @test_callback.json
+```
+
+## 📡 M-Pesa Callback Integration
+
+The application includes comprehensive callback handling for M-Pesa STK Push responses. When users complete payments, M-Pesa sends notifications to your callback URL.
+
+**📚 Callback Documentation:**
+- **[Callback Setup Guide](CALLBACK_SETUP_GUIDE.md)** - Complete implementation guide
+- **[Quick Reference](CALLBACK_QUICK_REFERENCE.md)** - 30-second setup instructions  
+- **[Example Code](callback_example.py)** - Copy-paste callback handler
+
+**Key Features:**
+- ✅ Automatic payment status processing
+- ✅ Transaction data extraction
+- ✅ Error handling and logging
+- ✅ Database integration examples
+- ✅ Security best practices
+- ✅ Production deployment guide
+
 ## 🔍 Key Differences
 
 | Aspect | Original | Object-Oriented |
